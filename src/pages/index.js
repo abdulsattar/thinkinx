@@ -19,7 +19,7 @@ const BlogIndex = ({ data, location }) => {
       </blockquote>
       <p>
         The most important thing you need to learn about a language is how to
-        think in it. This blog languages highlighting that aspect. It doesn't
+        think in it. This website covers this aspect of languages. It doesn't
         focus much on syntax or the ecosystem. There are sites like{" "}
         <a href="https://learnxinyminutes.com">Learn X in Y minutes</a> for
         that.
