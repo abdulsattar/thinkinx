@@ -12,8 +12,19 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
+      <SEO title="All Languages" />
+
+      <blockquote>
+        A language that doesn't affect the way you think about programming, is
+        not worth knowing. - Alan Perlis
+      </blockquote>
+      <p>
+        The most important thing you need to learn about a language is how to
+        think in it. This blog languages highlighting that aspect. It doesn't
+        focus much on syntax or the ecosystem. There are sites like{" "}
+        <a href="https://learnxinyminutes.com">Learn X in Y minutes</a> for
+        that.
+      </p>
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -21,25 +32,18 @@ const BlogIndex = ({ data, location }) => {
             <header>
               <h3
                 style={{
-                  marginBottom: rhythm(1 / 4),
+                  marginBottom: rhythm(1.5),
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
             </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
           </article>
         )
       })}
+      <Bio />
     </Layout>
   )
 }
